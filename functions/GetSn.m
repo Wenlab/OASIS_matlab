@@ -18,10 +18,12 @@ function sn = GetSn(Y, range_ff, method)
 
 %% input arguments
 if ~exist('range_ff', 'var') || isempty(range_ff)
-    range_ff = [.25, .5];
+    % range_ff = [.25, .5];
+    range_ff = [.1, .5]; % modified by Daguang Li to get larger Sn
 end
 if ~exist('method', 'var') || isempty(method)
-    method = 'logmexp';
+    % method = 'logmexp';
+    method = 'mean'; % modified by Daguang Li to get larger Sn
 end
 if any(size(Y)==1)
     Y = reshape(Y, [], 1);

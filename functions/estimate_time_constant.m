@@ -26,7 +26,7 @@ if ~exist('sn', 'var') || isempty(sn)
     sn = GetSn(y);
 end
 if ~exist('lags', 'var') || isempty(lags)
-    lags = 5;
+    lags = 20; %%altered from 5
 end
 if ~exist('fudge_factor', 'var') || isempty(fudge_factor)
     fudge_factor = 1;
